@@ -10,14 +10,23 @@
 </head>
 
 <body>
+  
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+  
+    <picture>
+    <!-- square viewport -->
+      <source srcset="images/square_photos/museum-800_x_800.jpg,
+                      images/square_photos/museum-1600_x_1600.jpg 2x,
+                      images/square_photos/museum-2400_x_2400.jpg 3x"
+              media="(min-width: 1600px)">
 
-  </header>
+      <img src="images/square_photos/museum-1600_x_1600.jpg" alt="photos of museum">
+  </picture>
+</header> 
 </body>
 
 </html>
